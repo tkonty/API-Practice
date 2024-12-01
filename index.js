@@ -2,6 +2,8 @@ const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random';
 const quoteDisplayElement = document.getElementById('quoteDisplay');
 const quoteInputElement = document.getElementById('quoteInput');
 const timerElement = document.getElementById('timer');
+const startButtonElement = document.getElementById('startBtn');
+const mainScreenElement = document.getElementById('mainScreen');
 
 quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayElement.querySelectorAll('span');
@@ -59,4 +61,14 @@ function getTimerTime () {
     return Math.floor((new Date() - startTime) / 1000);
 }
 
-renderNewQuote();
+function startGame() {
+    mainScreenElement.classList.add('hidden');
+    quoteDisplayElement.classList.remove('hidden');
+    quoteInputElement.classList.remove('hidden');
+    quoteInputElement.focus();
+    renderNewQuote();
+}
+
+startButtonElement.addEventListener('click', () => {
+    startGame();
+})

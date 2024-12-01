@@ -6,9 +6,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: rgb(47, 88, 59);
+    background-color: rgb(47, 90, 60);
 }
 
 body .quote-input{
@@ -21,17 +22,42 @@ body .quote-input{
     border-radius: .5rem;
     width: 700px;
     max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #009bd3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color;
+}
+
+.btn:hover {
+    background-color: #00bbff;
+    cursor: pointer;
 }
 
 .timer {
-    position: absolute;
-    top: 4rem;
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: blanchedalmond;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .quote-display {
+    font-size: 1rem;
     margin-bottom: 1rem;
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
@@ -39,7 +65,7 @@ body .quote-input{
 
 .quote-input {
     background-color: transparent;
-    border: 2px solid;
+    border: 2px solid ;
     outline: none;
     width: 100%;
     height: 8rem;
@@ -61,4 +87,8 @@ body .quote-input{
 .incorrect {
     color: red;
     text-decoration: underline;
+}
+
+.hidden {
+    display: none;
 }
